@@ -10,6 +10,7 @@ public class HighOrLow {
 		System.out.println("ゲームは5回！！");
 		System.out.println("GAME_START");
 		int win = hantei();
+		result(win);
 	}
 	//ゲーム判定メソッド
 	public static int hantei(){
@@ -20,7 +21,6 @@ public class HighOrLow {
 		int toi = 0;
 		for(int i = 0; i < 5; i++){
 			try{
-				System.out.println("あ");
 				dai = rd.nextInt(10);
 				dai2 = rd.nextInt(10);
 				System.out.println(dai);
@@ -46,6 +46,29 @@ public class HighOrLow {
 			}
 		}
 		return win;
+	}
+	public static void result(int i){
+		System.out.println("結果:" + i + "勝");
+		switch(i){
+		case 0:
+			System.out.println("頑張ろう");
+			break;
+		case 1:
+			System.out.println("次こそは半分以上勝とう");
+			break;
+		case 2:
+			System.out.println("もうちょい頑張ろう");
+			break;
+		case 3:
+			System.out.println("まぁまぁかな");
+			break;
+		case 4:
+			System.out.println("あと一勝でハイローマスター！");
+			break;
+		case 5:
+			System.out.println("あなたが神");
+			break;
+		}
 	}
 
 }
